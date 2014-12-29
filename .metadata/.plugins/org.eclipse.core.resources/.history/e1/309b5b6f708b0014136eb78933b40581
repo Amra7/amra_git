@@ -1,0 +1,42 @@
+package Vjezbe;
+
+import java.awt.BorderLayout;
+
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JPanel;
+import javax.swing.JTextField;
+
+public class Zadatak1 {
+	
+	static JTextField textNum;
+	static JTextField nums;
+	
+public static void main(String[] args) {
+	
+	JFrame myFrame= new JFrame();
+	myFrame.setLayout(new BorderLayout());
+	
+	JPanel  myPanel = new JPanel();
+	textNum = new JTextField ();
+	myPanel.add(textNum, BorderLayout.CENTER);
+	JButton button = new JButton("Click");
+	myPanel.add(button, BorderLayout.WEST);
+	
+	nums = new JTextField ();
+	nums.setSize(40, 50);
+	myPanel.add(nums);
+	
+	
+	
+	
+	myFrame.setSize(400, 300);
+	myFrame.setTitle("Parni brojevi");
+	myFrame.setContentPane(myPanel);
+	
+	myFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+	myFrame.setVisible(true);
+	
+	}
+}
+

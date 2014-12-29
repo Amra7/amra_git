@@ -1,0 +1,31 @@
+package Vjezbe;
+
+import java.awt.Color;
+import java.awt.Graphics;
+
+public class Circle {
+
+	private int x;
+	private int y;
+	private int radius;
+	private boolean isFilled;
+	private Color color;
+	
+
+	public Circle(int x, int y, int radius, boolean isFilled, Color color) {
+		this.x = x;
+		this.y = y;
+		this.radius = radius;
+		this.isFilled = isFilled;
+		this.color=color;
+	}
+	
+	public void draw(Graphics g){
+		if (isFilled == true){
+			g.fillOval(this.x, this.y, this.radius, this.radius);
+		} else if ( isFilled == false){
+			g.drawOval(this.x, this.y, this.radius, this.radius);
+		}
+	}
+
+}

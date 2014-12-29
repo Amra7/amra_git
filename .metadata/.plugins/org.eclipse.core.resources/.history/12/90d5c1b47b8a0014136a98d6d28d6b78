@@ -1,0 +1,15 @@
+package Predavanje;
+
+import javax.swing.JFrame;
+
+public class ColorfulRectangle {
+public static void main(String[] args) {
+	
+	JFrame mainWindow= new JFrame();
+	mainWindow.setSize(800, 600);
+	mainWindow.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+	mainWindow.setVisible(true);
+	
+	
+}
+}

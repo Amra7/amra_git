@@ -1,0 +1,27 @@
+package Vjezbe;
+
+import java.awt.Graphics;
+
+import javax.swing.JFrame;
+import javax.swing.JPanel;
+
+public class Godina18DaNe {
+
+	public static void main(String[] args) {
+		
+		Panel panelQuestion = new Panel();
+		
+		JFrame mainWindow = new JFrame();
+		mainWindow.setSize(800, 600);
+		mainWindow.setContentPane(panelQuestion);
+		mainWindow.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		mainWindow.setVisible(true);
+	}
+	
+	public static class Panel extends JPanel {
+		public void paintComponent (Graphics g){
+			super.paintComponent(g);
+			g.drawString("Koliko imas godina?", 200, 200);
+		}
+	}
+}

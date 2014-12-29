@@ -1,0 +1,32 @@
+package Predavanje;
+
+import java.awt.BorderLayout;
+
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JPanel;
+import javax.swing.SwingConstants;
+
+public class MainFrame  extends JFrame {
+
+	public MainFrame (Students students){
+		
+		super("Prozivka");
+		
+
+		
+		JLabel mainLabel = new JLabel();
+		mainLabel.setText(students.getRandomStudent());
+		mainLabel.setHorizontalAlignment(SwingConstants.CENTER);
+		
+		JPanel mainPanel = new JPanel();
+		mainPanel.setLayout(new BorderLayout());
+		mainPanel.add(mainLabel, BorderLayout.CENTER);
+		
+	    this.setContentPane(mainPanel);
+		
+		this.setSize(400, 300);
+	    this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+	}
+	
+}

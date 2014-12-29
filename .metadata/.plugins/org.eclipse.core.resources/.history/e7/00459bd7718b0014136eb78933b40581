@@ -1,0 +1,52 @@
+package Vjezbe;
+
+import java.awt.BorderLayout;
+import java.awt.Graphics;
+
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JPanel;
+import javax.swing.JTextField;
+
+public class Zadatak1 {
+	
+	static JTextField enterNum;
+	static JTextField nums;
+	
+public static void main(String[] args) {
+	
+	JFrame myFrame= new JFrame();
+	myFrame.setLayout(new BorderLayout());
+	myFrame.setSize(400, 300);
+	myFrame.setTitle("Parni brojevi");
+	
+	enterNum = new JTextField ();
+	enterNum.setSize(50, 15);
+	JButton button = new JButton("Click");
+
+	
+	nums = new JTextField ();
+	nums.setSize(200, 100);
+
+	Display display = new Display ();
+	myFrame.setContentPane(display);
+	display.add(button, BorderLayout.WEST);
+	display.add(enterNum, BorderLayout.CENTER );
+	display.add(nums, BorderLayout.SOUTH );
+	
+	
+
+	myFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+	myFrame.setVisible(true);
+	
+	}
+
+    public static class Display extends JPanel {
+    	public void paintComponent(Graphics g) {
+            super.paintComponent(g);
+            g.drawString( "Enter number", 20, 30 );
+        }
+	
+    }
+}
+

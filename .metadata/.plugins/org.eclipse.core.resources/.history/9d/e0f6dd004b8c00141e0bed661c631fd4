@@ -1,0 +1,62 @@
+package Vjezbe;
+
+import java.awt.Graphics;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
+import javax.swing.JFrame;
+import javax.swing.JPanel;
+import javax.swing.Timer;
+
+public class MovingBubble extends JPanel implements ActionListener{
+	
+	int frame = 0;
+	
+ public static void main(String[] args) {
+	
+	 JFrame  frame =  new JFrame();
+	 frame.setSize(500, 500);
+	 frame.setLocation(400, 400);
+	 
+	 MovingBubble mb= new MovingBubble();
+	 frame.setContentPane(mb);
+	 
+	 Timer t = new Timer(1000/25, mb);
+	 t.start();
+	 
+	 frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+	 frame.setVisible(true);
+	 
+}
+ 
+     public void paintComponent(Graphics g){
+    	 super.paintComponent(g);
+    	 g.fillOval(50+frame, 50+frame, 60, 60);
+    	 otherPaint(g);
+    	 streetLines(g);
+     }
+     
+     public void otherPaint (Graphics g){
+    	 g.fillOval(450-frame, 50+frame, 60, 60);
+     }
+     
+     public void streetLines(Graphics g){
+    	 g.drawRect(0, 20, 10, 60);
+    	 g.drawRect(20, 80, 10, 60);
+    	 g.drawRect(20, 160, 10, 60);
+    	 g.drawRect(20, 240, 10, 60);
+    	 g.drawRect(20, 320, 10, 60);
+    	 g.drawRect(20, 400, 10, 60);
+    	 g.drawRect(20, 480, 10, 60);
+    	 
+     }
+
+	@Override
+	public void actionPerformed(ActionEvent e) {
+		frame++;
+		repaint();
+		
+	}
+     
+	// end of class
+}

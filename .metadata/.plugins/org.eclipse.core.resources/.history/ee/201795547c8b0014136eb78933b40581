@@ -1,0 +1,35 @@
+package Vjezbe;
+
+import java.awt.FlowLayout;
+
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JPanel;
+import javax.swing.JTextArea;
+import javax.swing.JTextField;
+
+public class Zadatak1Benjo {
+	
+	static JTextField enter;
+	static JTextArea out;
+	
+public static void main(String[] args) {
+	
+	JFrame frame = new JFrame("Parni brojevi");
+	JPanel panel  =new JPanel();
+	JButton button = new JButton ();
+	enter = new JTextField(10);
+	out = new JTextArea(10,10);
+	
+	panel.setLayout(new FlowLayout ());
+	panel.add(enter);
+	panel.add(out);
+	panel.add(button);
+	
+	frame.add(panel);
+	
+	frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+	frame.pack();
+	frame.setVisible(true);
+}
+}

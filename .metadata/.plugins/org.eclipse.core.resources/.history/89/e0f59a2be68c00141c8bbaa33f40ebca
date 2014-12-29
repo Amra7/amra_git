@@ -1,0 +1,67 @@
+package Predavanje;
+
+import java.awt.BorderLayout;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JPanel;
+import javax.swing.SwingConstants;
+
+/* Varijane definicije UGNJEZDENE KLASE*/
+
+// Svaka klasa ima pristup javnim statickim atributima drugih klasa
+// Svaka ugnjdezdena klasa ima pristip statickim atributima klase u kojoj se nalazi
+// Svaka ugnjezdena klasa moze pristiupiti svim atributima objekta u kojem je ugnjezdena
+
+public class MainFrame  extends JFrame {
+	
+	private JButton mainButton;
+	private JLabel mainLabel;
+	private JPanel mainPanel;
+	
+
+	public MainFrame (Students students){
+		
+		super("Prozivka");
+		
+        mainButton = new JButton("Sljedeci student");
+        mainLabel = new JLabel();
+        NextStudentListener nsl = new NextStudentListener( students);
+        mainButton.addActionListener(nsl);
+		
+        mainLabel.setText(students.getRandomStudent());
+		mainLabel.setHorizontalAlignment(SwingConstants.CENTER);
+		
+		mainPanel = new JPanel();
+		mainPanel.setLayout(new BorderLayout());
+		mainPanel.add(mainLabel, BorderLayout.CENTER);
+		mainPanel.add(mainButton, BorderLayout.PAGE_END);
+		
+	    this.setContentPane(mainPanel);
+		
+		this.setSize(400, 300);
+	    this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+	}
+	
+	// Ako klasa ni
+	
+	private class NextStudentListener implements ActionListener  {
+
+		private Students students;
+		
+		public NextStudentListener( Students students) {
+
+			this.students = students;
+		}
+
+		@Override
+		public void actionPerformed(ActionEvent e) {
+			mainLabel.setText(students.getRandomStudent());
+			
+		}
+
+	}
+}

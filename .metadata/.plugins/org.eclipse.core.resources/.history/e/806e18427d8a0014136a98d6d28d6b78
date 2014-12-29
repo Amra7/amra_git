@@ -1,0 +1,32 @@
+package Predavanje;
+
+import java.awt.Graphics;
+
+import javax.swing.JFrame;
+import javax.swing.JPanel;
+
+public class ColorfulRectangle {
+	public static void main(String[] args) {
+
+		Canvas canvasPanel = new Canvas ();
+		
+		JFrame mainWindow = new JFrame("Pravougaonik");
+		mainWindow.setSize(800, 600);
+		mainWindow.setContentPane(canvasPanel);
+		mainWindow.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		mainWindow.setVisible(true);
+		
+		Canvas canvasPanel = new Canvas ();
+		
+		
+
+	}
+
+	public static class Canvas extends JPanel {
+		@Override
+		public void paintComponent(Graphics g){
+			g.drawRect(50, 50, 150, 150);
+		}
+		
+	}
+}

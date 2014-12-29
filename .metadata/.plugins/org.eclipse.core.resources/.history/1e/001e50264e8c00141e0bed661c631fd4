@@ -1,0 +1,33 @@
+package Vjezbe;
+
+import java.awt.Color;
+import java.awt.Graphics;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
+import javax.swing.JPanel;
+
+public class Jesenko  extends JPanel implements ActionListener{
+	
+	int frame = 0;
+	Circle c1 = new Circle(10,10,50,true);
+	Circle c2 = new Circle(480,20,50,false);
+	
+	public void paintComponent (Graphics g){
+		super.paintComponent(g);
+//		g.setColor(Color.BLUE);
+//		g.fillRect(100+frame, 100+frame, 100, 100);
+		
+		c1.draw(g);
+		c2.draw(g);
+	}
+
+	@Override
+	public void actionPerformed(ActionEvent e) {
+		frame++;
+		repaint();
+		
+	}
+	
+
+}

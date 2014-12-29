@@ -1,0 +1,22 @@
+package Vjezbe;
+
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
+public class TimerTest {
+
+	public static void main(String[] args) {
+		
+	}
+	
+	private static class TimerHandler implements ActionListener {
+		int counter = 0;
+
+		@Override
+		public void actionPerformed(ActionEvent arg0) {
+			System.out.println(counter++);
+			
+		}
+		
+	}
+}

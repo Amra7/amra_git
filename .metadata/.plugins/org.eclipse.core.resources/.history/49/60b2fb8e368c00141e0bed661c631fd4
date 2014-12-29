@@ -1,0 +1,5 @@
+package Vjezbe;
+
+public interface FirstInterface {
+
+}

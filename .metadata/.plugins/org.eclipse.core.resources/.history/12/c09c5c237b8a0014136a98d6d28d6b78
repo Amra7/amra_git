@@ -1,0 +1,7 @@
+package Predavanje;
+
+public class ColorfulRectangle {
+public static void main(String[] args) {
+	
+}
+}

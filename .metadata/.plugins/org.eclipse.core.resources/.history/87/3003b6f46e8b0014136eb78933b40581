@@ -1,0 +1,21 @@
+package Vjezbe;
+
+import javax.swing.JFrame;
+import javax.swing.JPanel;
+
+public class Zadatak1 {
+public static void main(String[] args) {
+	
+	JPanel  myPanel = new JPanel();
+	
+	JFrame myFrame= new JFrame();
+	myFrame.setSize(400, 300);
+	myFrame.setTitle("Parni brojevi");
+	myFrame.setContentPane(myPanel);
+	
+	myFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+	myFrame.setVisible(true);
+	
+	}
+}
+

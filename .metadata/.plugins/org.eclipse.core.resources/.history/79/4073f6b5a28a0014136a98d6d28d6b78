@@ -1,0 +1,75 @@
+package Vjezbe;
+
+import java.awt.BorderLayout;
+import java.awt.Graphics;
+import java.awt.event.MouseEvent;
+import java.awt.event.MouseListener;
+
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JPanel;
+import javax.swing.JTextField;
+
+public class Godina18DaNe {
+
+	public static void main(String[] args) {
+		
+		Panel panelQuestion = new Panel();
+		JButton okButton = new JButton("Ok");
+		JTextField text = new JTextField("HAlloooooo");
+	
+		ButtonHandler listener = new ButtonHandler();
+		panelQuestion.setLayout(new BorderLayout());
+		panelQuestion.add(okButton, BorderLayout.SOUTH);
+		
+		
+		JFrame mainWindow = new JFrame();
+		mainWindow.setSize(400, 300);
+		mainWindow.setContentPane(panelQuestion);
+		mainWindow.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		mainWindow.setVisible(true);
+		mainWindow.setTitle("Smijes li ostati vani poslije 11h?");
+		mainWindow.add(text, BorderLayout.AFTER_LINE_ENDS);
+	}
+	
+	public static class Panel extends JPanel {
+		public void paintComponent (Graphics g){
+			super.paintComponent(g);
+			g.drawString("Koliko imas godina?", 100, 100);
+		}
+	}
+	
+	public static class ButtonHandler implements MouseListener {
+
+		@Override
+		public void mouseClicked(MouseEvent e) {
+			// TODO Auto-generated method stub
+			
+		}
+
+		@Override
+		public void mouseEntered(MouseEvent e) {
+			// TODO Auto-generated method stub
+			
+		}
+
+		@Override
+		public void mouseExited(MouseEvent e) {
+			// TODO Auto-generated method stub
+			
+		}
+
+		@Override
+		public void mousePressed(MouseEvent e) {
+			// TODO Auto-generated method stub
+			
+		}
+
+		@Override
+		public void mouseReleased(MouseEvent e) {
+			// TODO Auto-generated method stub
+			
+		}
+		
+	}
+}

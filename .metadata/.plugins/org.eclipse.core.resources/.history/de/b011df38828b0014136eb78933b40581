@@ -1,0 +1,30 @@
+package ColorPicker;
+
+import java.awt.Color;
+
+import javax.swing.JButton;
+import javax.swing.JPanel;
+
+public class ColorPicker extends JPanel {
+
+	private static Color[] palette = new Color[] {
+		Color.WHITE,
+		Color.BLACK,
+		Color.RED,
+		Color.BLUE,
+		Color.GREEN,
+		Color.CYAN,
+		Color.MAGENTA,
+		new Color(133, 7, 42),
+	};
+	
+	public ColorPicker(){
+		super();
+		for ( int i = 0; i < palette.length; i++){
+			JButton d = new JButton("Color");
+			d.setBackground(palette[i]);
+			d.setForeground(palette[i]);
+			add(d);
+		}
+	}
+}

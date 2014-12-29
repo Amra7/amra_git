@@ -1,0 +1,24 @@
+package vjezbe;
+
+import java.awt.Graphics;
+
+import javax.swing.JPanel;
+
+public class Circle extends JPanel {
+
+	private int x;
+	private int y;
+	private int radius;
+	
+	public Circle(int x, int y, int radius){
+		super();
+		this.x=x;
+		this.y=y;
+		this.radius=radius;		
+	}
+	
+	public void paintComponent (Graphics g){
+		super.paintComponent(g);
+		g.fillOval(this.x, this.y, this.radius, this.radius);
+	}
+}

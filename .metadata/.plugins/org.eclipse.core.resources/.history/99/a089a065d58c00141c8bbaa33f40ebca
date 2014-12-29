@@ -1,0 +1,16 @@
+package Predavanje;
+
+import javax.swing.JFrame;
+
+public class Callout {
+public static void main(String[] args) {
+	
+	Students students = new Students();
+	System.out.println(students.getRandomStudent());
+	
+	JFrame mainWindow = new JFrame();
+	mainWindow.setSize(400, 300);
+	mainWindow.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+	mainWindow.setVisible(true);
+}
+}

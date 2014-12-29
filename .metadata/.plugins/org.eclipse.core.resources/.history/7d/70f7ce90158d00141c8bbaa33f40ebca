@@ -1,0 +1,42 @@
+package jumper;
+
+import java.awt.Color;
+import java.awt.Graphics;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
+import javax.swing.JPanel;
+import javax.swing.Timer;
+
+public class GameGraphics extends JPanel implements ActionListener{
+
+	private Timer animation;
+	private Body [] elements;
+	private int elementsCount;
+	
+
+	
+	public GameGraphics(){
+		super();
+		animation = new Timer(1000/60, this);
+		elements = new Body [3];
+		elementsCount = 0;
+		// ovo smo stavili samo radi debuginga
+		elementsCount = 1;
+		elements[0] =  new Oval (0,0,20,30, Color.RED, 3, 1);
+		animation.start();
+	}
+	
+	public void paintComponent (Graphics g) {
+		super.paintComponent(g);
+		for (int i =0; i<elementsCount; i++){
+			elements[i].draw(g);
+		}
+	}
+
+	@Override
+	public void actionPerformed(ActionEvent e) {
+		repaint();
+		
+	}
+}

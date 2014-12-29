@@ -1,0 +1,23 @@
+package Vjezbe;
+
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JPanel;
+
+public class Zadatak2 {
+public static void main(String[] args) {
+	
+	JFrame frame = new JFrame();
+	JPanel panel = new JPanel();
+	JButton b1 = new JButton("Jedno");
+	JButton b2 = new JButton("Drugo");
+	
+	panel.add(b1);
+	panel.add(b2);
+	
+	
+	frame.add(panel);
+	frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+	frame.setVisible(true);
+}
+}

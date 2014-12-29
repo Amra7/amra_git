@@ -1,0 +1,21 @@
+package vjezbe;
+
+import javax.swing.JFrame;
+
+public class MainCircle {
+	
+    public static void main(String[] args) {
+    	
+    	Circle c1 = new Circle(10, 10, 40);
+    	
+    	JFrame window = new JFrame();
+       	window.setSize(500, 500);
+       	window.setContentPane(c1);
+       	
+       	
+       	window.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+    	window.setVisible(true);
+    	
+	
+}
+}

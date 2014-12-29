@@ -1,0 +1,13 @@
+package PracticeAndExplanation;
+
+import javax.swing.JFrame;
+
+public class Practice1 {
+public static void main(String[] args) {
+	
+	JFrame window = new JFrame("GUI101");
+	
+	window.setSize(800, 600);
+	window.setVisible(true);
+}
+}

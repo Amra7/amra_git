@@ -1,0 +1,19 @@
+package Vjezbe;
+
+import javax.swing.JFrame;
+import javax.swing.JPanel;
+
+public class SimpleGeometry  extends JPanel {
+
+	public static void main(String[] args) {
+		
+		JFrame myFrame = new JFrame("Neke budalastine");
+		myFrame.setLocation(500, 200);
+		myFrame.setSize(500, 500);
+		SimpleGeometry sp = new SimpleGeometry();
+		myFrame.setContentPane(sp);
+		
+		myFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		myFrame.setVisible(true);
+	}
+}

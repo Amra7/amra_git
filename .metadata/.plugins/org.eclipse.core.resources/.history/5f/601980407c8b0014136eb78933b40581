@@ -1,0 +1,25 @@
+package Vjezbe;
+
+import javax.swing.JFrame;
+import javax.swing.JPanel;
+import javax.swing.JTextArea;
+import javax.swing.JTextField;
+
+public class Zadatak1Benjo {
+	
+	static JTextField enter;
+	static JTextArea out;
+	
+public static void main(String[] args) {
+	
+	JFrame frame = new JFrame("Parni brojevi");
+	JPanel panel  =new JPanel();
+	enter = new JTextField(10);
+	out = new JTextArea(10,10);
+	
+	panel.ad
+	
+	frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+	frame.setVisible(true);
+}
+}

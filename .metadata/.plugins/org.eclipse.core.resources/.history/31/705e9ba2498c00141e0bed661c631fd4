@@ -1,0 +1,28 @@
+package Vjezbe;
+
+import java.awt.Graphics;
+
+import javax.swing.JFrame;
+import javax.swing.JPanel;
+
+public class MovingBubble extends JPanel {
+ public static void main(String[] args) {
+	
+	 JFrame  frame =  new JFrame();
+	 frame.setSize(500, 500);
+	 frame.setLocation(400, 400);
+	 
+	 MovingBubble mb= new MovingBubble();
+	 frame.setContentPane(mb);
+	 
+	 frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+	 frame.setVisible(true);
+}
+ 
+     public void paintComponent(Graphics g){
+    	 super.paintComponent(g);
+    	 g.fillOval(50, 50, 60, 60);
+     }
+     
+     
+}
