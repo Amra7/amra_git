@@ -1,0 +1,39 @@
+import javax.swing.JFrame;
+import javax.swing.JPanel;
+
+
+public class Login {
+
+	public Login(){
+		
+		JFrame window = new JFrame("Login");
+		window.setSize(200, 300);
+		JPanel panel = new JPanel();
+		
+		
+		JLabel labelUser =  new JLabel("Enter username: ");
+		JTextField usernameField =  new JTextField();
+		
+		JLabel labelPass =  new JLabel("Enter password: ");
+		JPasswordField passwordField = new JPasswordField();
+		
+		JButton buttonLog =  new JButton("Login");
+		
+		JButton buttonQuit =  new JButton("Quit");
+		
+		panel.add(labelUser);
+		panel.add(labelPass);
+		panel.add(buttonLog);
+		panel.add(buttonQuit);
+		window.setContentPane(panel);
+		
+		window.setVisible(true);
+		window.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		
+	}
+	
+	public class Handler {
+		
+	}
+	
+}

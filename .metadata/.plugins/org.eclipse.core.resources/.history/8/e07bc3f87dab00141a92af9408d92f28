@@ -1,0 +1,27 @@
+package ba.bitcamp.lectrue.Damir.threads;
+
+public class ThreadInterrupt {
+
+	public static void main(String[] args) throws InterruptedException {
+	
+		Thread firstThread = new Thread( ){
+			
+			@Override
+			public void run() {
+				
+//				super.run();
+				try {
+					sleep(3000);
+					System.out.println("Dobro jutro radni narode!");
+				} catch (InterruptedException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+				
+			}
+			
+		};
+		
+		firstThread.start();
+	}
+}

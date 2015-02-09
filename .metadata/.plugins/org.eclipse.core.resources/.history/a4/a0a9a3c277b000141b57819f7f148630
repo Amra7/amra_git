@@ -1,0 +1,22 @@
+package ba.bitcamp.Benjo.pools;
+
+import ba.bitcamp.logger.Logger;
+
+public class Greetings implements Runnable{
+
+	private String id;
+	
+	public Greetings(String id){
+		this.id =id;
+	}
+	@Override
+	public void run() {
+		for ( int i=0; i<5; i++){
+		//	System.out.printf("Ja sam thread: %s izbrojao sam %d \n", id ,i );
+			String message =  String.format("Hi I am thread %2d , my count is %2d\n","Thread"+i, i);
+			Logger.log("threadlog", message);
+		}
+		
+	}
+
+}

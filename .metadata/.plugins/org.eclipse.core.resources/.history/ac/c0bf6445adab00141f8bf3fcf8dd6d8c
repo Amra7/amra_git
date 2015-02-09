@@ -1,0 +1,24 @@
+package Server;
+
+/**
+ * Class Messages that help us to add new MESSAGES and save the messages.
+ * @author amrapoprzanovic
+ *
+ */
+public class Massages {
+
+	private String content;
+	private String sender;
+	
+	/**
+	 * Constructor for Messages
+	 * @param content
+	 * @param sender
+	 */
+	public Massages(String content, String sender) {
+		super();
+		this.content = content;
+		this.sender = sender;
+	}
+	
+}

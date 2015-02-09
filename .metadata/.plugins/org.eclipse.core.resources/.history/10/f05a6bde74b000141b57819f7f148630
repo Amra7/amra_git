@@ -1,0 +1,9 @@
+package ba.bitcamp.Benjo.pools;
+
+public class TestGreetings {
+
+	public static void main(String[] args) {
+		 Greetings g1 = new Greetings("Prvi");
+		 new Thread(g1).start();
+	}
+}

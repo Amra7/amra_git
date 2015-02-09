@@ -1,0 +1,16 @@
+package ba.bitcamp.lecture.Emir.arhitecture;
+
+public class RandomSum {
+
+	public static void main(String[] args) {
+
+		long previousRun = System.currentTimeMillis();
+		for (int j = 0; j < 20; j++) {
+
+			Task t = new Task(1000);
+			new Thread(t).start();
+
+		}
+		System.out.println("Prvi run: "+ (System.currentTimeMillis() -previousRun));
+	}
+}

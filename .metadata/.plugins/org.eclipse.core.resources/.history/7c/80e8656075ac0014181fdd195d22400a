@@ -1,0 +1,48 @@
+package Server;
+
+import java.io.File;
+import java.io.IOException;
+
+import javax.xml.parsers.DocumentBuilder;
+import javax.xml.parsers.DocumentBuilderFactory;
+import javax.xml.parsers.ParserConfigurationException;
+import javax.xml.xpath.XPath;
+import javax.xml.xpath.XPathConstants;
+import javax.xml.xpath.XPathFactory;
+
+import org.w3c.dom.Document;
+import org.w3c.dom.Node;
+import org.xml.sax.SAXException;
+
+public class XMLConnection {
+
+	private static Document xmldoc;
+	private static DocumentBuilder docReader;
+	private static XPath xPath;
+	
+
+	/**
+	 * Constructor for XMLConnection
+	 * @throws SAXException
+	 * @throws IOException
+	 * @throws ParserConfigurationException
+	 */
+	public XMLConnection() throws SAXException, IOException,
+			ParserConfigurationException {
+		
+		xmldoc = docReader.parse(new File("./USERXML/user.xml"));
+		docReader = DocumentBuilderFactory.newInstance().newDocumentBuilder();
+		
+		xPath = XPathFactory.newInstance().newXPath();
+
+	}
+	
+	public static int  userLogin(String username, String password){
+		String expersion = "//user[@username=\""+username + "\" and @password=\"" + password + "\"]";
+		System.out.println(expersion);
+		
+		Node current = (NodeList)xPath.compile(expersion).evaluate(xmldoc, XPathConstants.NODE); // <---
+		return 0;
+	}
+
+}

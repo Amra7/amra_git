@@ -1,0 +1,16 @@
+package ba.bitcamp.lecture.Damir.bigdecimal;
+
+import java.util.Scanner;
+
+public class BigDecimal {
+
+	public static void main(String[] args) {
+		BigDecimal dec;
+		Scanner s =  new Scanner(System.in);
+		String decimalString = s.nextLine();
+		
+		dec =  new BigDecimal(decimalString);
+		
+		System.out.printlf("Unijeli ste:  %s \n", dec);
+	}
+}

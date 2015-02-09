@@ -1,0 +1,34 @@
+package ba.bitcamp.exercise.Benjo.xml;
+
+import java.io.IOException;
+import java.net.URL;
+
+import javax.xml.parsers.DocumentBuilder;
+import javax.xml.parsers.DocumentBuilderFactory;
+import javax.xml.parsers.ParserConfigurationException;
+
+import org.w3c.dom.Document;
+
+import org.w3c.dom.NodeList;
+import org.xml.sax.SAXException;
+
+public class KlixReader {
+	public static void main(String[] args) throws ParserConfigurationException,
+			SAXException, IOException {
+
+		DocumentBuilder docReader = DocumentBuilderFactory.newInstance()
+				.newDocumentBuilder();
+		Document xmldoc = docReader.parse(new URL(
+				"http://www.klix.ba/rss/svevijesti").openStream());
+
+		// ne saljes new File nego url tipa "http://www.klix.ba/rss/svevijesti"
+		NodeList xmlTitle = xmldoc.getElementsByTagName("title");
+
+		for (int i = 0; i < xmlTitle.getLength(); i++) {
+			System.out.println(xmlTitle.item(i).getNodeName());
+			System.out.println(xmlTitle.item(i).getNodeValue());
+			System.out.println(xmlTitle.item(i).getTextContent());
+		}
+
+	}
+}

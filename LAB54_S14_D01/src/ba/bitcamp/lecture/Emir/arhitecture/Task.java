@@ -1,0 +1,36 @@
+package ba.bitcamp.lecture.Emir.arhitecture;
+
+public class Task implements Runnable {	
+	private int numOperations;
+	
+	public Task(int numOperations){
+		super();
+		this.numOperations =  numOperations;
+	}
+	
+	@Override
+	public void run() {
+		long start = System.currentTimeMillis();
+		double res  =1;
+		for ( int i=0; i<numOperations; i++){
+			res *= Math.random();
+			if (res == 0){
+				res = Math.random();
+			}
+		}
+		System.out.println("Rezultat mnozenja: " + res);
+		System.out.println("Mnozenje u ns: " + (System.currentTimeMillis() - start));
+		
+		for ( int i=0; i<numOperations; i++){
+			res += Math.random();
+			if (res == 0){
+				res = Math.random();
+			}
+		}
+		System.out.println("Result sabiranja: " + res);
+		System.out.println("Sabiranje u ns: " + (System.currentTimeMillis() - start));
+		
+	}
+	
+
+}

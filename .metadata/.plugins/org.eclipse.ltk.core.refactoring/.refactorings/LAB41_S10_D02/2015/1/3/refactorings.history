@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename type &apos;predavanjeTree.Tree&apos; to &apos;TreeString&apos;&#x0A;- Original project: &apos;LAB41_S10_D02&apos;&#x0A;- Original element: &apos;predavanjeTree.Tree&apos;&#x0A;- Renamed element: &apos;predavanjeTree.TreeString&apos;&#x0A;- Update references to refactored element&#x0A;- Update textual occurrences in comments and strings" description="Rename type &apos;Tree&apos;" flags="589830" id="org.eclipse.jdt.ui.rename.type" input="/src&lt;predavanjeTree{Tree.java[Tree" matchStrategy="1" name="TreeString" qualified="false" references="true" similarDeclarations="false" stamp="1421171782552" textual="false" version="1.0"/>
+</session>

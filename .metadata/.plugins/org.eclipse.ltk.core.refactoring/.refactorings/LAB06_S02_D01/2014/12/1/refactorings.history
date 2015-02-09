@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy element &apos;Zadatak01SubString.java&apos; to &apos;amra_git/src&apos;&#x0A;- Original project: &apos;LAB06_S02_D01&apos;&#x0A;- Destination element: &apos;amra_git/src&apos;&#x0A;- Original element: &apos;Zadatak01SubString.java&apos;" description="Copy compilation unit" destination="=amra_git/src" element1="/src&lt;{Zadatak01SubString.java" files="0" flags="589830" folders="0" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyResources" stamp="1419872311794" units="1" version="1.0"/>
+</session>

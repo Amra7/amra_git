@@ -1,0 +1,5 @@
+package ba.bitcamp.lectrue.Damir.threads;
+
+public class ThreadInterrupt {
+
+}

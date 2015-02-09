@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy element &apos;TextIO.java&apos; to &apos;amra_git/src/(default package)&apos;&#x0A;- Original project: &apos;LAB09_ S02_D04_Vjezbe&apos;&#x0A;- Destination element: &apos;amra_git/src/(default package)&apos;&#x0A;- Original element: &apos;TextIO.java&apos;" description="Copy compilation unit" destination="=amra_git/src&lt;" element1="/src&lt;{TextIO.java" files="0" flags="589830" folders="0" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyResources" stamp="1419872534802" units="1" version="1.0"/>
+</session>

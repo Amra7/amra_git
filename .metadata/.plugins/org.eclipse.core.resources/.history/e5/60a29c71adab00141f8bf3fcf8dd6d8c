@@ -1,0 +1,25 @@
+package Server;
+
+/**
+ * Class Messages that help us to add new MESSAGES and save the messages.
+ * @author amrapoprzanovic
+ *
+ */
+public class Massage {
+
+	private String content;
+	private String sender;
+	public static Queue<Message> msgQueue;
+	
+	/**
+	 * Constructor for Messages
+	 * @param content
+	 * @param sender
+	 */
+	public Massage(String content, String sender) {
+		super();
+		this.content = content;
+		this.sender = sender;
+	}
+	
+}

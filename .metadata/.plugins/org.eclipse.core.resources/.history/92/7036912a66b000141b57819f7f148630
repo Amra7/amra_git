@@ -1,0 +1,30 @@
+package ba.bitcamp.logger;
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.util.HashMap;
+import java.util.Iterator;
+import java.util.Set;
+
+public class Logger {
+
+	public static HashMap<String,FileOutputStream>logs;
+	//key - type of login
+	//type - new File
+	public Logger(HashMap<String,String> logType) throws FileNotFoundException{
+		
+		String basePath = "." +File.separator +"logs"+ File.separator;
+		Set<String> keySeth = logType.keySet();
+		Iterator<String> iter =  keySeth.iterator();
+		
+		while( iter.hasNext()){
+			String key = iter.next();
+			String value = logType.get(key);
+			
+			File newFile = new File(basePath + value + ".txt");
+			FileOutputStream fos = new FileOutputStream(newFile, true); // append true so that new data written in file would not overwrite the old one.
+			logs.put(key, fos);
+		}
+		
+	}
+}

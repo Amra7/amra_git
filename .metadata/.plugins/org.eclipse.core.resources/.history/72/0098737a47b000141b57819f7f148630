@@ -1,0 +1,17 @@
+package ba.bitcamp.lecture.Emir.arhitecture;
+
+import java.util.Date;
+
+public class RandomSum {
+
+	public static void main(String[] args) {
+
+		for ( int j=0; j<100; j++){
+			
+
+			Task t = new Task(1000);
+			new Thread(t).start();
+				
+	}
+	}
+}

@@ -1,0 +1,30 @@
+package ba.botcamp.lecture.Emri.arhitecture;
+
+import java.util.Date;
+
+public class RandomSum {
+
+	public static void main(String[] args) {
+//		Date start =  new Date();
+		long start = System.currentTimeMillis();
+		double res  =1;
+		for ( int i=0; i<10000; i++){
+			res *= Math.random();
+			if (res == 0){
+				res = Math.random();
+			}
+		}
+		
+		System.out.println("Result : " + res);
+		System.out.println("Mnozenje u ns: " + (System.currentTimeMillis() - start));
+		
+		for ( int i=0; i<1000; i++){
+			res += Math.random();
+			if (res == 0){
+				res = Math.random();
+			}
+		}
+		System.out.println("Result addtion : " + res);
+		System.out.println("Sabiranje u ns: " + (System.currentTimeMillis() - start));
+	}
+}

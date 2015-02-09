@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section name="Workbench">
-	<item value="/Users/amrapoprzanovic/Documents/workspace/LAB02_S01_D02/.git" key="GitSelectRepositoryPage.lastRepository"/>
+	<item value="/Users/amrapoprzanovic/Documents/workspace/.git" key="GitSelectRepositoryPage.lastRepository"/>
 	<item value="0" key="org.eclipse.egit.ui.internal.clone.GitSelectWizardPageWizardSel"/>
 	<list key="RepositorySelectionPage.UsedUris">
 		<item value="file:////Users/amrapoprzanovic/Documents/workspace/Pravljenje-cestitke-grupni-rad-master"/>
 	</list>
 	<section name="GitImportWizard">
+		<item value="true" key="GitProjectsImportPage.STORE_NESTED_PROJECTS"/>
 	</section>
 </section>

@@ -1,0 +1,32 @@
+package ba.bitcamp.lecture.Emir.arhitecture;
+
+import java.util.Date;
+
+public class RandomSum {
+
+	public static void main(String[] args) {
+//		Date start =  new Date();
+		for ( int j=0; j<100; j++){
+		long start = System.currentTimeMillis();
+		double res  =1;
+		for ( int i=0; i<10000; i++){
+			res *= Math.random();
+			if (res == 0){
+				res = Math.random();
+			}
+		}
+		
+		System.out.println("Rezultat mnozenja: " + res);
+		System.out.println("Mnozenje u ns: " + (System.currentTimeMillis() - start));
+		
+		for ( int i=0; i<10000; i++){
+			res += Math.random();
+			if (res == 0){
+				res = Math.random();
+			}
+		}
+		System.out.println("Result sabiranja: " + res);
+		System.out.println("Sabiranje u ns: " + (System.currentTimeMillis() - start));
+		}
+	}
+}

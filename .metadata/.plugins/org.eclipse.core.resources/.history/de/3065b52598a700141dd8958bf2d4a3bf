@@ -1,0 +1,20 @@
+package ba.bitcamp.lecture.Damir.bigdecimal;
+
+import java.math.BigDecimal;
+import java.util.Currency;
+
+public class MoneyTest {
+
+	public static void main(String[] args) {
+		printMoney();
+		String m = "12.34 BAM";
+		Money.parse(m);
+
+	}
+
+	private static void printMoney() {
+		Money m = new Money(new BigDecimal("10.15"),
+				Currency.getInstance("BAM"));
+		System.out.println(m);
+	}
+}

@@ -1,0 +1,98 @@
+package ba.bitcamp.exercise.Benjo.GUI;
+
+import java.awt.Component;
+import java.awt.Dimension;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.awt.event.KeyAdapter;
+import java.awt.event.KeyEvent;
+import java.awt.event.KeyListener;
+
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JPanel;
+import javax.swing.JScrollPane;
+import javax.swing.JTextArea;
+import javax.swing.JTextField;
+
+public class GUIChat {
+
+	private JTextArea display;
+	private JTextField messageIn;
+
+	public GUIChat() {
+		JFrame window = new JFrame("GUI chat");
+		window.setLocation(700, 300);
+		window.setSize(400 ,300);
+		window.setPreferredSize(new Dimension(400,300));
+		JPanel panel = new JPanel();
+		
+		display = new JTextArea();
+		display.setPreferredSize(new Dimension( 390,220));
+		display.setLineWrap(true);
+		display.setWrapStyleWord(true);
+		
+		JScrollPane scrollPane = new JScrollPane(display);
+		scrollPane.setVerticalScrollBarPolicy(JScrollPane.VERTICAL_SCROLLBAR_AS_NEEDED);
+		scrollPane.setPreferredSize(new Dimension(20,220));
+		
+		
+		messageIn = new JTextField();
+		messageIn.setPreferredSize(new Dimension(250,30));
+		
+		messageIn.addKeyListener(new KeyAdapter() {
+			
+			@Override
+			public void keyTyped(KeyEvent e){
+				if (! messageIn.getText().equals("")){
+				if (e.getKeyChar() == KeyEvent.VK_ENTER){
+					String enteredMsg = messageIn.getText();
+					System.out.println("Me: "+ enteredMsg);
+				    messageIn.setText("");
+					
+					display.append("Me: " + enteredMsg + "\n");
+				}
+				}
+			}
+		});
+		JButton buttonSend = new JButton("Send");
+		
+		ButtonHandler listener =  new ButtonHandler();
+		buttonSend.addActionListener(listener);
+		
+		panel.add(display);
+		
+		panel.add(messageIn);
+		panel.add(buttonSend);
+	
+		window.setContentPane(panel);
+	
+		window.setResizable(false);
+		window.setVisible(true);
+		window.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+	}
+	
+//	moze se i ovdje dodati extends KeyAdapter  umjesto da bude anonimna klasa
+	public class ButtonHandler implements ActionListener {
+
+		@Override
+		public void actionPerformed(ActionEvent e) {
+//			String enteredMsg = messageIn.getText();
+//			System.out.println("Me: "+ enteredMsg);
+//		    messageIn.setText("");
+
+			
+			sendMessage();
+		    
+		}
+		 private void sendMessage(){
+			  if (! messageIn.getText().equals("")){
+				  display.append("Me: "+ messageIn.getText() + "\n");
+				  messageIn.setText(null);
+			  }
+		 }
+		
+	}
+	
+
+}

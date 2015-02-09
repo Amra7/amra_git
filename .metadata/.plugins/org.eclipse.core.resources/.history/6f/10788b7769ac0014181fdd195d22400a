@@ -1,0 +1,50 @@
+package Client;
+
+import java.awt.Dimension;
+
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JPanel;
+import javax.swing.JPasswordField;
+import javax.swing.JTextField;
+
+
+public class Login {
+
+	public Login(){
+		
+		JFrame window = new JFrame("Login");
+		window.setLocation(500, 500);
+		window.setSize(200, 300);
+		JPanel panel = new JPanel();
+		
+		
+		JLabel labelUser =  new JLabel("Enter username: ");
+		JTextField usernameField =  new JTextField();
+		usernameField.setPreferredSize(new Dimension(100,20));
+		
+		JLabel labelPass =  new JLabel("Enter password: ");
+		JPasswordField passwordField = new JPasswordField();
+		passwordField.setPreferredSize(new Dimension(100,20));
+		
+		JButton buttonLog =  new JButton("Login");
+		
+		JButton buttonQuit =  new JButton("Quit");
+		
+		panel.add(labelUser);
+		panel.add(labelPass);
+		panel.add(buttonLog);
+		panel.add(buttonQuit);
+		window.setContentPane(panel);
+		
+		window.setVisible(true);
+		window.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		
+	}
+	
+	public class Handler {
+		
+	}
+	
+}

@@ -1,0 +1,15 @@
+package ba.bitcamp.lecture.Emir.arhitecture;
+
+
+public class RandomSum {
+
+	public static void main(String[] args) {
+
+		for ( int j=0; j<1; j++){
+
+			Task t = new Task(1000);
+			new Thread(t).start();
+				
+	}
+	}
+}

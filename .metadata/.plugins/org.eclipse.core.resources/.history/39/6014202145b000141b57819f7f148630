@@ -1,0 +1,25 @@
+package ba.botcamp.lecture.Emri.arhitecture;
+
+public class RandomSum {
+
+	public static void main(String[] args) {
+		
+		double res  =1;
+		for ( int i=0; i<10000; i++){
+			res *= Math.random();
+			if (res == 0){
+				res = Math.random();
+			}
+		}
+		
+		System.out.println("Result : " + res);
+		
+		for ( int i=0; i<1000; i++){
+			res += Math.random();
+			if (res == 0){
+				res = Math.random();
+			}
+		}
+		System.out.println("Result addtion : " + res);
+	}
+}

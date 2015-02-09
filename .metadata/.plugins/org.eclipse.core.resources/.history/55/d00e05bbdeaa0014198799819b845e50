@@ -1,0 +1,56 @@
+package ba.bitcamp.exercise.Benjo.GUI;
+
+import java.awt.Component;
+import java.awt.Dimension;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JPanel;
+import javax.swing.JTextArea;
+import javax.swing.JTextField;
+
+public class GUIChat {
+
+	private JTextArea display;
+	private JTextField messageIn;
+
+	public GUIChat() {
+		JFrame window = new JFrame("GUI chat");
+		window.setSize(400 ,300);
+		window.setPreferredSize(new Dimension(400,300));
+		JPanel panel = new JPanel();
+		
+		display = new JTextArea();
+		display.setPreferredSize(new Dimension( 390,220));
+		
+		messageIn = new JTextField();
+		messageIn.setPreferredSize(new Dimension(250,30));
+		JButton buttonSend = new JButton("Send");
+		ButtonHandler listener =  new ButtonHandler();
+		buttonSend.addActionListener(listener);
+		
+		panel.add(display);
+		panel.add(messageIn);
+		panel.add(buttonSend);
+	
+		window.setContentPane(panel);
+	
+		window.setResizable(false);
+		window.setVisible(true);
+		window.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+	}
+	
+	public class ButtonHandler implements ActionListener{
+
+		@Override
+		public void actionPerformed(ActionEvent e) {
+			String enteredMsg = messageIn.getText();
+			System.out.println("Me: "+ enteredMsg);
+			
+			display.setText("Me: " + enteredMsg);
+		}
+		
+	}
+}

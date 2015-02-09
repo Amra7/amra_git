@@ -1,0 +1,18 @@
+package ba.bitcamp.Benjo.pools;
+
+public class Greetings implements Runnable{
+
+	private String id;
+	
+	public Greetings(String id){
+		this.id =id;
+	}
+	@Override
+	public void run() {
+		for ( int i=0; i<5; i++){
+			System.out.printf("Ja sam thread: %s izbrojao sam %d", id ,i );
+		}
+		
+	}
+
+}

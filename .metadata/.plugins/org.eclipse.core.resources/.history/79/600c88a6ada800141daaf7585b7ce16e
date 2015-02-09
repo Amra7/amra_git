@@ -1,0 +1,12 @@
+package ba.bitcamp.lecture.tarik.threads;
+
+public class OurMulitThreadApp {
+
+	public static void main(String[] args) {
+		
+		WriteInt wi  = new WriteInt("Integers");
+		WriteStrings ws  = new WriteStrings("Strings");
+		wi.start();
+		ws.start();
+	}
+}

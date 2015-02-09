@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy package &apos;com.bitcamp.networking.socket&apos; to &apos;LAB47_S11_D04&apos;&#x0A;- Original project: &apos;SocketServer&apos;&#x0A;- Destination element: &apos;LAB47_S11_D04&apos;&#x0A;- Original element: &apos;SocketServer/src/com.bitcamp.networking.socket&apos;" description="Copy package" element1="/src&lt;com.bitcamp.networking.socket" flags="589830" fragments="1" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyPackages" stamp="1421954887410" target="/LAB47_S11_D04" version="1.0"/>
+</session>
